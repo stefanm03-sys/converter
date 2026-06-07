@@ -1,0 +1,29 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Converter</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Converter</h1>
+        <p>Enter the numeric value:</p>
+        <input type="text" id="inputval" placeholder="Enter a value!">
+        <select id="fromconv">
+            <option value="nmi">Nautical Miles</option>
+            <option value="km">Kilometers</option>
+            <option value="mi">Miles</option>
+        </select>
+        <select id="toconv">
+            <option value="nmi">Nautical Miles</option>
+            <option value="km">Kilometers</option>
+            <option value="mi">Miles</option>
+        </select>
+        <button onclick="convertUnits()">Convert!</button>
+        <p id="result">Waiting..</p>
+
+    </body>
+</html>
+
