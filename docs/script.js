@@ -43,3 +43,18 @@ function convertUnits() {
     document.getElementById("result").innerHTML = "Conversion not supported.";
     return null;
 }
+
+function convertFile() {
+    var file = getElementById("fileInput").file[0];
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        var contents = e.target.result;
+        var lines = contents.split("\n");
+        var results = [];
+        for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            // Process each line as needed
+        }
+    }
+      
+}
