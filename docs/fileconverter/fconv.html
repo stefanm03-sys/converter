@@ -1,0 +1,30 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Converter</title>
+        <link rel="stylesheet" href="fconv.css">
+        <script type="module" src="fconv.js"></script>
+    </head>
+    <body>
+        <h1>File Converter</h1>
+        <h2>Convert media files!</h2>
+        <input id="mediaInput" type="file" accept="audio/*,video/*" hidden>
+        <button id="browseBtn" type="button">Browse your device for files.</button>
+        <label for="formatSelect">Output Format!</label>
+        <select id="formatSelect">
+            <option value="mp3">MP3</option>
+            <option value="wav">WAV</option>
+            <option value="ogg">OGG</option>
+            <option value="mp4">MP4</option>
+            <option value="webm">WebM</option>
+        </select>
+        <button id="convertBtn" type="button">Convert file!</button>
+        <p id="selectedFile">No file selected!</p>
+        <p id="status">Ready!</p>
+        <a id="downloadLink" hidden>Download your file!</a>
+    </body>
+
+
+</html>

@@ -12,18 +12,26 @@
         <p>Enter the numeric value:</p>
         <input type="text" id="inputval" placeholder="Enter a value!">
         <select id="fromconv">
+            <option value="ft">Feet</option>
+            <option value="m">Meters</option>
+            <option value="in">Inches</option>
+            <option value="cm">Centimeters</option>
             <option value="nmi">Nautical Miles</option>
             <option value="km">Kilometers</option>
             <option value="mi">Miles</option>
         </select>
         <select id="toconv">
+            <option value="ft">Feet</option>
+            <option value="m">Meters</option>
+            <option value="in">Inches</option>
+            <option value="cm">Centimeters</option>
             <option value="nmi">Nautical Miles</option>
             <option value="km">Kilometers</option>
             <option value="mi">Miles</option>
         </select>
         <button onclick="convertUnits()">Convert!</button>
         <p id="result">Waiting..</p>
-
+        <button type="button" href="fileconverter/fconv.html">File Converter</button>
     </body>
 </html>
 
