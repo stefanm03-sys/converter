@@ -20,6 +20,13 @@ select {
     font-size: 1em;
 }
 
+label {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1em;
+}
 #inputval {
     display: block;
     margin: 20px auto;

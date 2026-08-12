@@ -11,7 +11,8 @@
         <h1>Converter</h1>
         <p>Enter the numeric value:</p>
         <input type="text" id="inputval" placeholder="Enter a value!">
-        <select id="fromconv">
+        <label for="fromconv">From:</label>
+        <select id="fromconv" title="From unit">
             <option value="ft">Feet</option>
             <option value="m">Meters</option>
             <option value="in">Inches</option>
@@ -20,7 +21,8 @@
             <option value="km">Kilometers</option>
             <option value="mi">Miles</option>
         </select>
-        <select id="toconv">
+        <label for="toconv">To:</label>
+        <select id="toconv" title="To unit">
             <option value="ft">Feet</option>
             <option value="m">Meters</option>
             <option value="in">Inches</option>
@@ -32,6 +34,7 @@
         <button onclick="convertUnits()">Convert!</button>
         <p id="result">Waiting..</p>
         <button type="button" href="fileconverter/fconv.html">File Converter</button>
+        <button type="button" href="reference/ref.html">References</button>
 
     </body>
 </html>

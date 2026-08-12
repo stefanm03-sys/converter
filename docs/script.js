@@ -56,9 +56,7 @@ function convertUnits() {
     } else if (fromUnit === toUnit) {
         document.getElementById("result").innerHTML = amount + " " + fromUnit;
         return amount;
-    } 
-
-    if (fromUnit === "km" && toUnit === "mi") {
+    } else if (fromUnit === "km" && toUnit === "mi") {
         var result = amount / 1.60934;
         document.getElementById("result").innerHTML = result + " miles";
         return result;
@@ -74,14 +72,103 @@ function convertUnits() {
         var result = amount * 0.868976;
         document.getElementById("result").innerHTML = result + " nautical miles";
         return result;
+    } else if (fromUnit === "ft" && toUnit === "m") {
+        var result = amount / 3.28084;
+        document.getElementById("result").innerHTML = result + " meters";
+        return result;
+    } else if (fromUnit === "m" && toUnit === "ft") {
+        var result = amount * 3.28084;
+        document.getElementById("result").innerHTML = result + " feet";
+        return result;
+    } else if (fromUnit === "m" && toUnit === "cm") {
+        var result = amount * 100;
+        document.getElementById("result").innerHTML = result + " centimeters";
+        return result;
+    } else if (fromUnit === "m" && toUnit === "km") {
+        var result = amount / 1000;
+        document.getElementById("result").innerHTML = result + " kilometers";
+        return result;
+    } else if (fromUnit === "km" && toUnit === "m") {
+        var result = amount * 1000;
+        document.getElementById("result").innerHTML = result + " meters";
+        return result;
+    } else if (fromUnit === "mi" && toUnit === "m") {
+        var result = amount * 1609.34;
+        document.getElementById("result").innerHTML = result + " meters";
+        return result;
+    } else if (fromUnit === "m" && toUnit === "mi") {
+        var result = amount / 1609.34;
+        document.getElementById("result").innerHTML = result + " miles";
+        return result;
+    }   else if (fromUnit === "mi" && toUnit === "ft") {
+        var result = amount * 5280;
+        document.getElementById("result").innerHTML = result + " feet";
+        return result;
+    } else if (fromUnit === "ft" && toUnit === "mi") {
+        var result = amount / 5280;
+        document.getElementById("result").innerHTML = result + " miles";
+        return result;
+    } else if (fromUnit === "mi" && toUnit === "cm") {
+        var result = amount * 160934;
+        document.getElementById("result").innerHTML = result + " centimeters";
+        return result;
+    } else if (fromUnit === "cm" && toUnit === "mi") {
+        var result = amount / 160934;
+        document.getElementById("result").innerHTML = result + " miles";
+        return result;
+    } else if (fromUnit === "mi" && toUnit === "in") {
+        var result = amount * 63360;
+        document.getElementById("result").innerHTML = result + " inches";
+        return result;
+    } else if (fromUnit === "in" && toUnit === "mi") {
+        var result = amount / 63360;
+        document.getElementById("result").innerHTML = result + " miles";
+        return result;
+    } else if (fromUnit === "nmi" && toUnit === "m") {
+        var result = amount * 1852;
+        document.getElementById("result").innerHTML = result + " meters";
+        return result;
+    } else if (fromUnit === "m" && toUnit === "nmi") {
+        var result = amount / 1852;
+        document.getElementById("result").innerHTML = result + " nautical miles";
+        return result;
+    } else if (fromUnit === "nmi" && toUnit === "cm") {
+        var result = amount * 185200;
+        document.getElementById("result").innerHTML = result + " centimeters";
+        return result;
+    } else if (fromUnit === "cm" && toUnit === "nmi") {
+        var result = amount / 185200;
+        document.getElementById("result").innerHTML = result + " nautical miles";
+        return result;
+    } else if (fromUnit === "nmi" && toUnit === "ft") {
+        var result = amount * 6076.12;
+        document.getElementById("result").innerHTML = result + " feet";
+        return result;
+    } else if (fromUnit === "ft" && toUnit === "nmi") {
+        var result = amount / 6076.12;
+        document.getElementById("result").innerHTML = result + " nautical miles";
+        return result;
+    } else if (fromUnit === "nmi" && toUnit === "in") {
+        var result = amount * 72913.4;
+        document.getElementById("result").innerHTML = result + " inches";
+        return result;
+    } else if (fromUnit === "in" && toUnit === "nmi") {
+        var result = amount / 72913.4;
+        document.getElementById("result").innerHTML = result + " nautical miles";
+        return result;
     }
-
     document.getElementById("result").innerHTML = "Conversion not supported.";
     return null;
 }
 
+// Base Conversions Top, New Conversions Bottom
+
+if (fromUnit === "?" && toUnit === "?") {
+
+}
+
 function convertFile() {
-    var file = getElementById("fileInput").file[0];
+    var file = document.getElementById("fileInput").files[0];
     var reader = new FileReader();
     reader.onload = function(e) {
         var contents = e.target.result;
